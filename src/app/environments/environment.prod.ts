@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: 'https://backend-metrics.onrender.com/api/v1'
+  api: 'https://backend-metrics-iweg.onrender.com/api/v1'
 };
