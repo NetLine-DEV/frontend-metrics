@@ -1,0 +1,29 @@
+<div class="flex flex-col items-start w-full gap-2">
+  <label [for]="id" class="font-poppins font-medium text-sm">{{ label }}</label>
+  <div class="flex items-center w-full bg-tertiary/20 p-4 border-none rounded-lg">
+    <div class="px-2 flex items-center justify-center">
+      <img *ngIf="iconLeft" [src]="'/assets/images/' + iconLeft" [alt]="altLeft" />
+    </div>
+    <input
+      [type]="type"
+      [id]="id"
+      [name]="name"
+      [value]="value"
+      [placeholder]="placeholder"
+      [formControl]="control"
+      (input)="handleInput($event)"
+      (blur)="onTouched()"
+      class="flex-1 bg-transparent text-sm border-none outline-none"
+      required
+    />
+    <button *ngIf="showIconRight" type="button" class="flex items-center justify-center cursor-pointer border-none bg-transparent" (click)="togglePassword()">
+      <img [src]="'assets/images/' + iconRight" [alt]="altRight" />
+    </button>
+  </div>
+  <div *ngIf="control.invalid && (control.dirty || control.touched)" class="text-red-500 text-sm mt-1">
+    <div *ngIf="control.errors?.['required']">Este campo é obrigatório.</div>
+    <div *ngIf="control.errors?.['minlength']">O valor deve ter no mínimo {{ control.errors?.['minlength'].requiredLength }} caracteres.</div>
+    <div *ngIf="control.errors?.['maxlength']">O valor deve ter no máximo {{ control.errors?.['maxlength'].requiredLength }} caracteres.</div>
+    <div *ngIf="control.errors?.['email']">O valor deve ser um email válido.</div>
+  </div>
+</div>

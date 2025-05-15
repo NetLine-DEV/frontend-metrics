@@ -1,0 +1,84 @@
+<div class="h-full flex items-center justify-between gap-4 p-8">
+  <app-welcome 
+    [pathImage]="pathImage"
+    [altImage]="altImage"
+    [title]="title"
+    [text]="text"
+    class="h-full"
+  />
+  <div class="flex-1 h-full flex flex-col items-center justify-center gap-4">
+    <div class="mt-8 h-full w-full max-w-[500px] flex flex-col">
+      <app-text-form title="Cadastrar"/>
+      <form [formGroup]="form" (submit)="register()" class="h-full flex-1 flex flex-col items-center justify-center gap-8">
+        <div class="w-full">
+          <app-inputs 
+            label="Usuário:"
+            type="text"
+            id="user"
+            name="user"
+            formControlName="username"
+            [control]="usernameControl"
+            iconLeft="user.svg"
+            altLeft="Icone de usuário"
+            class="border-none p-0"
+          />
+        </div>
+        <div class="w-full">
+          <app-inputs 
+            label="Email:"
+            type="email"
+            id="email"
+            name="email"
+            formControlName="email"
+            [control]="emailControl"
+            iconLeft="email.svg"
+            altLeft="Icone de @ para identifcar o email"
+            class="border-none p-0"
+          />
+        </div>
+        <div class="w-full flex flex-col gap-2">
+          <app-inputs 
+            label="Senha:"
+            type="password"
+            id="password"
+            name="password"
+            formControlName="password"
+            [control]="passwordControl"
+            iconLeft="pass.svg"
+            altLeft="Icone de senha"
+            [showIconRight]="true"
+            altRight="Icone de olho dinâmico"
+            class="w-full border-none p-0"
+            />
+        </div>
+        <div class="w-full flex flex-col gap-2">
+          <app-inputs 
+            label="Repetir senha:"
+            type="password"
+            id="repeat_password"
+            name="repeat_password"
+            formControlName="repeat_password"
+            [control]="repeatPasswordControl"
+            iconLeft="pass.svg"
+            altLeft="Icone de senha"
+            [showIconRight]="true"
+            altRight="Icone de olho dinâmico"
+            class="w-full border-none p-0"
+            />
+        </div>
+        <app-button 
+          text="Cadastrar"
+          type="submit"
+          class="w-full"
+          height="2xl"
+          colorText="primary"
+          background="secondary"
+          backgroundHover="secondary_hover"
+          [loading]="loading"
+        />
+      </form>
+      <p class="text-center">Já possui conta? <a routerLink="/" class="text-link">Clique aqui</a></p>
+    </div>
+  </div>
+</div>
+

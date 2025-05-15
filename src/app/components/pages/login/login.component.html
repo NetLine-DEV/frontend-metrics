@@ -1,0 +1,62 @@
+<div class="h-full flex items-center justify-between gap-4 p-8">
+  <div class="flex-1 h-full flex flex-col items-center justify-center gap-4">
+    <div class="mt-8 h-full w-full max-w-[500px] flex flex-col">
+      <app-text-form title="Entrar"/>
+      <form (submit)="login()" [formGroup]="form" class="h-full flex-1 flex flex-col items-center justify-center gap-8">
+        <div class="w-full">
+          <app-inputs 
+            label="Email:"
+            type="text"
+            id="user"
+            name="user"
+            placeholder="Insira seu email"
+            formControlName="email"
+            [control]="emailControl"
+            iconLeft="user.svg"
+            altLeft="Icone de usuário"
+            class="border-none p-0"
+          />
+        </div>
+        <div class="w-full flex flex-col gap-2">
+          <app-inputs 
+            label="Senha:"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Insira sua senha"
+            formControlName="password"
+            [control]="passwordControl"
+            iconLeft="pass.svg"
+            altLeft="Icone de senha"
+            [showIconRight]="true"
+            altRight="Icone de olho dinâmico"
+            class="w-full border-none p-0"
+            />
+            <div class="w-full text-right">
+              <p>Esqueceu sua senha? <a routerLink="/reset-password"><span class="text-link">Redefinir!</span></a></p>
+            </div>
+        </div>
+        <app-button 
+          text="Entrar"
+          type="submit"
+          class="w-full"
+          height="2xl"
+          colorText="primary"
+          background="secondary"
+          backgroundHover="secondary_hover"
+          [loading]="loading"
+        />
+      </form>
+      <p class="text-center">Não possui conta? <a routerLink="/register" class="text-link">Clique aqui</a></p>
+    </div>
+  </div>
+  <app-welcome 
+    [pathImage]="pathImage"
+    [altImage]="altImage"
+    [title]="title"
+    [text]="text"
+    class="h-full"
+  />
+</div>
+
+

@@ -1,0 +1,9 @@
+<div class="h-full w-full">
+  @if (!verifyRoute()) {
+    <app-header>
+      <router-outlet></router-outlet>
+    </app-header>
+  } @else {
+    <router-outlet></router-outlet>
+  }
+</div>
