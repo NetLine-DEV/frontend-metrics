@@ -49,6 +49,8 @@ export class EditUserComponent implements OnInit {
   getUserInfo(): void {
     const userId = Number(this.route.snapshot.paramMap.get('id'));
 
+    console.log('ID do usuário:', userId);
+
     this.userService.getUser(userId).subscribe({
       next: (response: IUser) => {
         this.user = response;
@@ -119,9 +121,9 @@ export class EditUserComponent implements OnInit {
     const value = inputElement.value;
 
     this.filteredGroups$ = this.groups$.pipe(
-      map((groups: IGroup[]) => groups.filter((group: IGroup) => 
+      map((groups: IGroup[]) => groups.filter((group: IGroup) =>
         group.name.toLowerCase().includes(value.toLowerCase())
       ))
-    ); 
+    );
   }
 }

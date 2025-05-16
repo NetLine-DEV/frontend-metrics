@@ -29,7 +29,6 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   private userInfoService = inject(UserInfoService);
   private router = inject(Router);
 
-
   ngOnInit(): void {
     this.getUserInfo();
     this.authService.getUserPermissions().subscribe({
@@ -68,7 +67,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       this.authService.userPermissions.includes(permission)
     );
   }
-  
+
   logout(): void {
     this.authService.logout();
   }
