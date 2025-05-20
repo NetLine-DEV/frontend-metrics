@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { NgIcon } from '@ng-icons/core';
+import { NgIcon, provideIcons } from '@ng-icons/core';
 import { heroChartBarSolid, heroClockSolid, heroEyeSolid } from '@ng-icons/heroicons/solid';
 
 @Component({

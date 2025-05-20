@@ -6,7 +6,7 @@ import { UserInfoService } from '../../services/user_info/user-info.service';
 import { IUser } from '../../models/user.model';
 import { AuthService } from '../../services/auth/auth.service';
 import { Observable } from 'rxjs';
-import { NgIcon } from '@ng-icons/core';
+import { NgIcon, provideIcons } from '@ng-icons/core';
 import { heroArrowLeftStartOnRectangleSolid, heroChartPieSolid, heroChevronDownSolid, heroInformationCircleSolid, heroUserCircleSolid, heroUserGroupSolid, heroUserSolid, heroUsersSolid } from '@ng-icons/heroicons/solid';
 
 @Component({
