@@ -3,7 +3,7 @@ import { RouterLink } from '@angular/router';
 import { CardsComponent } from '../../cards/cards.component';
 import { initFlowbite } from 'flowbite';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { heroBoltSolid, heroShieldCheckSolid } from '@ng-icons/heroicons/solid';
+import { heroBoltSolid, heroCheckBadgeSolid, heroShieldCheckSolid } from '@ng-icons/heroicons/solid';
 
 @Component({
   selector: 'app-home',
