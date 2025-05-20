@@ -6,13 +6,18 @@ import { UserInfoService } from '../../services/user_info/user-info.service';
 import { IUser } from '../../models/user.model';
 import { AuthService } from '../../services/auth/auth.service';
 import { Observable } from 'rxjs';
+import { NgIcon } from '@ng-icons/core';
+import { heroArrowLeftStartOnRectangleSolid, heroChartPieSolid, heroChevronDownSolid, heroInformationCircleSolid, heroUserCircleSolid, heroUserGroupSolid, heroUserSolid, heroUsersSolid } from '@ng-icons/heroicons/solid';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, NgFor, NgIf],
+  imports: [RouterLink, NgFor, NgIf, NgIcon],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
+  viewProviders: [
+    provideIcons({ heroUserSolid, heroUserCircleSolid, heroInformationCircleSolid, heroArrowLeftStartOnRectangleSolid, heroChartPieSolid, heroChevronDownSolid, heroUserGroupSolid, heroUsersSolid }),
+  ]
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
   public user: IUser | null = null;

@@ -1,6 +1,6 @@
 <div class="h-full flex flex-col md:items-center lg:items-start justify-center gap-3 p-6 bg-primary border border-gray-200 rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-all">
   <div class="w-fit flex items-center justify-center p-2 rounded-md bg-secondary/10">
-    <img ngOptimizedImage class="hover:text-primary" [src]="'assets/images/' + icon" [alt]="altIcon">
+    <ng-icon [name]="icon!" />
   </div>
   <h5 class="text-2xl font-semibold tracking-tight text-secondary">{{title}}</h5>
   <p class="font-normal text-secondary/70 ">{{text}}</p>
