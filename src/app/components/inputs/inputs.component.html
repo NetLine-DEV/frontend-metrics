@@ -2,7 +2,7 @@
   <label [for]="id" class="font-poppins font-medium text-sm">{{ label }}</label>
   <div class="flex items-center w-full bg-tertiary/20 p-4 border-none rounded-lg">
     <div class="px-2 flex items-center justify-center">
-      <img *ngIf="iconLeft" [src]="'/assets/images/' + iconLeft" [alt]="altLeft" />
+      <ng-icon [name]="iconLeft!" />
     </div>
     <input
       [type]="type"
@@ -17,7 +17,8 @@
       required
     />
     <button *ngIf="showIconRight" type="button" class="flex items-center justify-center cursor-pointer border-none bg-transparent" (click)="togglePassword()">
-      <img [src]="'assets/images/' + iconRight" [alt]="altRight" />
+      <ng-icon *ngIf="!showPassword" name="heroEyeSolid" />
+      <ng-icon *ngIf="showPassword" name="heroEyeSlashSolid" />
     </button>
   </div>
   <div *ngIf="control.invalid && (control.dirty || control.touched)" class="text-red-500 text-sm mt-1">
