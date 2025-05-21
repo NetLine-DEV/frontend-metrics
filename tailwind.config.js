@@ -18,7 +18,7 @@ module.exports = {
         link: '#00AEEF',
         link_hover: '#04759E',
         hover: '#F9FAFB',
-        danger: '#BF0603',
+        danger: '#cb131a',
         danger_hover: '#7F0301'
       },
     },
