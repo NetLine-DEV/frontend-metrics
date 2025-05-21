@@ -84,9 +84,15 @@
                   {{user.email}}
                 </td>
                 @if (!user.groups[0]) {
-                  <td class="hidden md:table-cell px-6 py-4">
-                    Sem grupo
-                  </td>
+                  @if (user.is_staff) {
+                    <td class="hidden md:table-cell px-6 py-4">
+                      Administrador
+                    </td>
+                  } @else {
+                    <td class="hidden md:table-cell px-6 py-4">
+                      Sem grupo
+                    </td>
+                  }
                 } @else {
                   <td class="hidden md:table-cell px-6 py-4">
                     {{user.groups[0].name}}

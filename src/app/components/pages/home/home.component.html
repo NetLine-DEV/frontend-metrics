@@ -1,89 +1,96 @@
-<div class="h-full w-full flex flex-col justify-center gap-10 p-8 mt-8">
-  <div class="mt-2 flex flex-col gap-4">
-    <h1 class="text-5xl text-left text-secondary font-bold">
-      Bem vindo ao seu <span class="text-secondary lg:text-primary lg:bg-secondary rounded-md px-2 py-1">painel de controle</span>!
-    </h1>
-    <p class="text-secondary text-center lg:text-left lg:text-2xl font-medium">
-      Acesse suas métricas, relatórios e insights em um só lugar. Mantenha-se atualizado com as informações mais relevantes para sua empresa.
-    </p>
+<div class="h-full w-full">
+  <div class="flex-1 flex flex-col justify-center gap-10 p-8 mt-8">
+
+    <div class="mt-2 flex flex-col gap-4">
+      <h1 class="text-5xl text-center sm:text-left text-secondary font-bold">
+        Bem vindo ao seu <span class="text-secondary lg:text-primary lg:bg-danger rounded-md px-2 py-1">painel de controle!</span>
+      </h1>
+      <p class="text-secondary text-center lg:text-left lg:text-2xl font-medium">
+        Acesse suas métricas, relatórios e insights em um só lugar. Mantenha-se atualizado com as informações mais relevantes para sua empresa.
+      </p>
+    </div>
+  
+    <div class="w-full">
+      <div class="hidden lg:flex items-center justify-between gap-4">
+        <app-cards icon="heroClockSolid" altIcon="Ícone de relógio para card de acesso rápido" title="Relatórios Recentes"
+          text="Acesse rapidamente seus últimos relatórios e análises geradas." />
+        <app-cards icon="heroEyeSolid" altIcon="Ícone de olho para acompanhamento de progresso" title="Metas do Mês"
+          text="Acompanhe o progresso das suas metas e objetivos estabelecidos." />
+        <app-cards icon="heroChartBarSolid" altIcon="Ícone de gráfico para card de melhoria dos dados"
+          title="Insights do Dia" text="Descubra novos insights e tendências importantes para seu negócio." />
+      </div>
+  
+      <div id="default-carousel" class="relative w-full lg:hidden" data-carousel="slide">
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <!-- Item 1 -->
+            <div class="h-full hidden duration-700 ease-in-out" data-carousel-item>
+              <app-cards icon="heroClockSolid" altIcon="Ícone de lâmpada no card de insight" title="Relatórios Recentes"
+              text="Acesse rapidamente seus últimos relatórios e análises geradas." />
+            </div>
+            <!-- Item 2 -->
+            <div class="h-full hidden duration-700 ease-in-out" data-carousel-item>
+              <app-cards icon="heroEyeSolid" altIcon="Ícone de olho para card de visão" title="Metas do Mês"
+              text="Acompanhe o progresso das suas metas e objetivos estabelecidos." />
+            </div>
+            <!-- Item 3 -->
+            <div class="h-full hidden duration-700 ease-in-out" data-carousel-item>
+              <app-cards icon="heroChartBarSolid" altIcon="Ícone de flecha para cima para card de melhoria dos dados"
+              title="Insights do Dia" text="Descubra novos insights e tendências importantes para seu negócio." />
+            </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-2 left-1/2 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="flex-1 w-full flex flex-col md:flex-row rounded-xl drop-shadow-md">
+  
+      <div class="relative w-full md:w-1/2">
+        <img class="absolute inset-0 w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-tr-none overflow-hidden"
+          src="/assets/images/business.jpg" alt="" loading="eager"/>
+        <div class="flex flex-col items-center justify-center relative z-10 p-6 h-full bg-black/50 text-primary rounded-t-lg md:rounded-l-lg md:rounded-tr-none">
+          <h1 class="text-3xl font-bold">Recursos Disponíveis</h1>
+          <p class="text-lg">Tenha o acompanhamento de sua equipe toda em um único lugar!</p>
+        </div>
+      </div>
+  
+      <div class="flex flex-col gap-8 p-8 h-full w-full md:w-1/2 bg-primary rounded-b-xl md:rounded-r-xl md:rounded-bl-none">
+        <div class="flex gap-2">
+          <div class="w-fit h-fit p-2 rounded-md bg-secondary/10">
+            <ng-icon class="text-danger" name="heroCheckBadgeSolid" />
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-secondary">Métricas em Tempo Quase Real</h2>
+            <p>Dados atualizados várias vezes ao dia para garantir decisões precisas e ágeis.</p>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <div class="w-fit h-fit p-2 rounded-md bg-secondary/10">
+            <ng-icon class="text-danger" name="heroBoltSolid" />
+          </div>
+          <div>
+          <h2 class="text-2xl font-bold text-secondary">Interface Intuitiva</h2>
+          <p>Navegação simples e moderna, feita para facilitar o dia a dia da sua equipe.</p>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <div class="w-fit h-fit p-2 rounded-md bg-secondary/10">
+            <ng-icon class="text-danger" name="heroShieldCheckSolid" />
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-secondary">Controle de Acesso</h2>
+            <p>Gerencie permissões por usuário com segurança e precisão.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="w-full">
-    <div class="hidden lg:flex items-center justify-between gap-4">
-      <app-cards icon="heroClockSolid" altIcon="Ícone de relógio para card de acesso rápido" title="Relatórios Recentes"
-        text="Acesse rapidamente seus últimos relatórios e análises geradas." />
-      <app-cards icon="heroEyeSolid" altIcon="Ícone de olho para acompanhamento de progresso" title="Metas do Mês"
-        text="Acompanhe o progresso das suas metas e objetivos estabelecidos." />
-      <app-cards icon="heroChartBarSolid" altIcon="Ícone de gráfico para card de melhoria dos dados"
-        title="Insights do Dia" text="Descubra novos insights e tendências importantes para seu negócio." />
-    </div>
-
-    <div id="default-carousel" class="relative w-full lg:hidden" data-carousel="slide">
-      <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-          <!-- Item 1 -->
-          <div class="h-full hidden duration-700 ease-in-out" data-carousel-item>
-            <app-cards icon="insight.svg" altIcon="Ícone de lâmpada no card de insight" title="Relatórios Recentes"
-            text="Acesse rapidamente seus últimos relatórios e análises geradas." />
-          </div>
-          <!-- Item 2 -->
-          <div class="h-full hidden duration-700 ease-in-out" data-carousel-item>
-            <app-cards icon="eye-card.svg" altIcon="Ícone de olho para card de visão" title="Metas do Mês"
-            text="Acompanhe o progresso das suas metas e objetivos estabelecidos." />
-          </div>
-          <!-- Item 3 -->
-          <div class="h-full hidden duration-700 ease-in-out" data-carousel-item>
-            <app-cards icon="arrow.svg" altIcon="Ícone de flecha para cima para card de melhoria dos dados"
-            title="Insights do Dia" text="Descubra novos insights e tendências importantes para seu negócio." />
-          </div>
-      </div>
-      <!-- Slider indicators -->
-      <div class="absolute z-30 flex -translate-x-1/2 bottom-2 left-1/2 space-x-3 rtl:space-x-reverse">
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-      </div>
-    </div>
-  </div>
-
-  <div class="flex-1 w-full flex flex-col md:flex-row rounded-xl drop-shadow-md">
-
-    <div class="relative w-full md:w-1/2">
-      <img class="absolute inset-0 w-full h-full object-cover rounded-t-lg md:rounded-l-lg md:rounded-tr-none overflow-hidden"
-        src="/assets/images/business.jpg" alt="" loading="eager"/>
-      <div class="flex flex-col items-center justify-center relative z-10 p-6 h-full bg-black/50 text-primary rounded-t-lg md:rounded-l-lg md:rounded-tr-none">
-        <h1 class="text-3xl font-bold">Recursos Disponíveis</h1>
-        <p class="text-lg">Tenha o acompanhamento de sua equipe toda em um único lugar!</p>
-      </div>
-    </div>
-
-    <div class="flex flex-col gap-8 p-8 h-full w-full md:w-1/2 bg-primary rounded-b-xl md:rounded-r-xl md:rounded-bl-none">
-      <div class="flex gap-2">
-        <div class="w-fit h-fit p-2 rounded-md bg-secondary/10">
-          <ng-icon name="heroCheckBadgeSolid" />
-        </div>
-        <div>
-          <h2 class="text-2xl font-bold text-secondary">Métricas em Tempo Quase Real</h2>
-          <p>Dados atualizados várias vezes ao dia para garantir decisões precisas e ágeis.</p>
-        </div>
-      </div>
-      <div class="flex gap-2">
-        <div class="w-fit h-fit p-2 rounded-md bg-secondary/10">
-          <ng-icon name="heroBoltSolid" />
-        </div>
-        <div>
-        <h2 class="text-2xl font-bold text-secondary">Interface Intuitiva</h2>
-        <p>Navegação simples e moderna, feita para facilitar o dia a dia da sua equipe.</p>
-        </div>
-      </div>
-      <div class="flex gap-2">
-        <div class="w-fit h-fit p-2 rounded-md bg-secondary/10">
-          <ng-icon name="heroShieldCheckSolid" />
-        </div>
-        <div>
-          <h2 class="text-2xl font-bold text-secondary">Controle de Acesso</h2>
-          <p>Gerencie permissões por usuário com segurança e precisão.</p>
-        </div>
-      </div>
-    </div>
+  <div class="mt-10 text-center text-secondary">
+    © 2025 Netline Telecom. Todos os direitos reservados.
   </div>
 </div>
