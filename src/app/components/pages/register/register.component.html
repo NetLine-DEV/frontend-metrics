@@ -18,9 +18,10 @@
             name="user"
             formControlName="username"
             [control]="usernameControl"
-            iconLeft="user.svg"
+            iconLeft="heroUserSolid"
             altLeft="Icone de usuário"
             class="border-none p-0"
+            placeholder="Insira seu nome de usuário"
           />
         </div>
         <div class="w-full">
@@ -31,9 +32,10 @@
             name="email"
             formControlName="email"
             [control]="emailControl"
-            iconLeft="email.svg"
+            iconLeft="heroAtSymbolSolid"
             altLeft="Icone de @ para identifcar o email"
             class="border-none p-0"
+            placeholder="Insira seu email"
           />
         </div>
         <div class="w-full flex flex-col gap-2">
@@ -44,11 +46,12 @@
             name="password"
             formControlName="password"
             [control]="passwordControl"
-            iconLeft="pass.svg"
+            iconLeft="heroLockClosedSolid"
             altLeft="Icone de senha"
             [showIconRight]="true"
             altRight="Icone de olho dinâmico"
             class="w-full border-none p-0"
+            placeholder="Insira sua senha"
             />
         </div>
         <div class="w-full flex flex-col gap-2">
@@ -59,11 +62,12 @@
             name="repeat_password"
             formControlName="repeat_password"
             [control]="repeatPasswordControl"
-            iconLeft="pass.svg"
+            iconLeft="heroLockClosedSolid"
             altLeft="Icone de senha"
             [showIconRight]="true"
             altRight="Icone de olho dinâmico"
             class="w-full border-none p-0"
+            placeholder="Repita sua senha"
             />
         </div>
         <app-button 

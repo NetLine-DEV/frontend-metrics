@@ -2,7 +2,7 @@ import { NgIf } from '@angular/common';
 import { Component, Input, OnInit, forwardRef } from '@angular/core';
 import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { heroEyeSolid, heroEyeSlashSolid, heroUserSolid, heroLockClosedSolid } from '@ng-icons/heroicons/solid';
+import { heroEyeSolid, heroEyeSlashSolid, heroUserSolid, heroLockClosedSolid, heroAtSymbolSolid } from '@ng-icons/heroicons/solid';
 
 @Component({
   selector: 'app-inputs',
@@ -11,7 +11,7 @@ import { heroEyeSolid, heroEyeSlashSolid, heroUserSolid, heroLockClosedSolid } f
   templateUrl: './inputs.component.html',
   styleUrl: './inputs.component.css',
   providers: [
-    provideIcons({ heroEyeSolid, heroEyeSlashSolid, heroUserSolid, heroLockClosedSolid }),
+    provideIcons({ heroEyeSolid, heroEyeSlashSolid, heroUserSolid, heroLockClosedSolid, heroAtSymbolSolid }),
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => InputsComponent),
